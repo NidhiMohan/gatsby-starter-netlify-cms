@@ -32,7 +32,23 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-
+  
+  - name: "event"
+    label: "Event"
+    folder: "src/pages/event"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "event-post",
+        }
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+  
   - name: "pages"
     label: "Pages"
     files:
